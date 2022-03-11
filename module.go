@@ -22,3 +22,11 @@ func Recent(favorit string) (float32, float32) {
 	b = a + (a * 10 / 100)
 	return a, b
 }
+
+func Member(nama string, re bool){
+	if re == true {
+		fmt .Println(nama, " merupakan seorang member")
+	} else {
+		fmt.Println(nama, " bukan member")
+	}
+}
