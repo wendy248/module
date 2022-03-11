@@ -27,8 +27,8 @@ func Recent(favorit string) (float32, float32) {
 
 func Member(nama string, status bool) {
 	if status(nama) {
-		fmt.Println(nama, " merupakan seorang member")
+		fmt.Println(nama, "merupakan seorang member")
 	} else {
-		fmt.Println(nama, " bukan member")
+		fmt.Println(nama, "bukan member")
 	}
 }
