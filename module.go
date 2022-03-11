@@ -2,11 +2,11 @@ package module
 
 import "fmt"
 
-// type DaftarMenu struct {
-// 	nama	string
-// 	harga	int16
-// 	stok	bool
-// }
+type DaftarMenu struct {
+	nama  string
+	harga int16
+	stok  bool
+}
 
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
@@ -31,25 +31,25 @@ func Recent(favorit string) (float32, float32) {
 
 func Member(nama string, status func(string) bool) {
 	if status(nama) {
-		fmt.Println(nama, " merupakan seorang member")
+		fmt.Println(nama, "merupakan seorang member")
 	} else {
-		fmt.Println(nama, " bukan member")
+		fmt.Println(nama, "bukan member")
 	}
 }
 
-// func TampilMenu(){
-// 	menu1 := DaftarMenu{
-// 		nama: "kopi",
-// 		harga: 30000,
-// 		stok: true,
-// 	}
+func TampilMenu() {
+	menu1 := DaftarMenu{
+		nama:  "kopi",
+		harga: 30000,
+		stok:  true,
+	}
 
-// menu2 := DaftarMenu{
-// 	nama : "air",
-// 	harga : 10000,
-// 	stok: true,
-// }
+	// menu2 := DaftarMenu{
+	// 	nama : "air",
+	// 	harga : 10000,
+	// 	stok: true,
+	// }
 
-// fmt.Println(menu1)
-// fmt.Println(menu2)
-// }
+	fmt.Println(menu1)
+	// fmt.Println(menu2)
+}
