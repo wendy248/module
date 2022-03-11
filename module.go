@@ -28,19 +28,19 @@ func Recent(favorit string) (float32, float32) {
 	return a, b
 }
 
-func Member(nama string, status bool) {
-	if status {
+func Member(nama string, status func(string) bool) {
+	if status(nama) {
 		fmt.Println(nama, " merupakan seorang member")
 	} else {
 		fmt.Println(nama, " bukan member")
 	}
 }
 
-func DaftarMenu() {
-	menu1 := Menu{
-		nama:  "Kopi",
-		harga: 30000,
-	}
+// func DaftarMenu() {
+// 	menu1 := Menu{
+// 		nama:  "Kopi",
+// 		harga: 30000,
+// 	}
 
 	// menu2 := Menu{
 	// 	nama:  "Air Mineral",
@@ -51,7 +51,7 @@ func DaftarMenu() {
 	// 	nama:  "Susu",
 	// 	harga: 20000,
 	// }
-	fmt.Println(menu1)
+	// fmt.Println(menu1)
 	// fmt.Println(menu2)
 	// fmt.Println(menu3)
-}
+// }
