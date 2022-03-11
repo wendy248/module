@@ -3,9 +3,9 @@ package module
 import "fmt"
 
 type DaftarMenu struct {
-	nama  string
-	harga int16
-	stok  bool
+	Nama  string
+	Harga int16
+	Stok  bool
 }
 
 func Intro() {
@@ -39,9 +39,9 @@ func Member(nama string, status func(string) bool) {
 
 func TampilMenu() {
 	var menu1 DaftarMenu = DaftarMenu{
-		nama:  "kopi",
-		harga: 30000,
-		stok:  true,
+		Nama:  "kopi",
+		Harga: 30000,
+		Stok:  true,
 	}
 
 	fmt.Println(menu1)
