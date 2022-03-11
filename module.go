@@ -2,7 +2,10 @@ package module
 
 import "fmt"
 
-// type Status func(string) bool
+type Menu struct {
+	nama	string
+	harga	int16
+}
 
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
@@ -31,4 +34,24 @@ func Member(nama string, status bool) {
 	} else {
 		fmt.Println(nama, " bukan member")
 	}
+}
+
+func DaftarMenu(){
+	menu1 := Menu{
+		nama: "Kopi",
+		harga: 30000,
+	}
+
+	menu2 := Menu{
+		nama: "Air Mineral",
+		harga: 10000,
+	}
+
+	menu3 := Menu{
+		nama: "Susu",
+		harga: 20000,
+	}
+	fmt.Println(menu1)
+	fmt.Println(menu2)
+	fmt.Println(menu3)
 }
