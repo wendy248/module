@@ -38,7 +38,7 @@ func Member(nama string, status func(string) bool) {
 }
 
 func TampilMenu() {
-	menu1 := DaftarMenu{
+	var menu1 DaftarMenu = DaftarMenu{
 		nama:  "kopi",
 		harga: 30000,
 		stok:  true,
