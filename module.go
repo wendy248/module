@@ -44,12 +44,12 @@ func TampilMenu(){
 		stok: true,
 	}
 
-	menu2 := DaftarMenu{
-		nama : "air",
-		harga : 10000,
-		stok: true,
-	}
+	// menu2 := DaftarMenu{
+	// 	nama : "air",
+	// 	harga : 10000,
+	// 	stok: true,
+	// }
 
 	fmt.Println(menu1)
-	fmt.Println(menu2)
+	// fmt.Println(menu2)
 }
