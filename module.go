@@ -3,8 +3,8 @@ package module
 import "fmt"
 
 type Menu struct {
-	nama	string
-	harga	int16
+	nama  string
+	harga int16
 }
 
 func Intro() {
@@ -36,22 +36,22 @@ func Member(nama string, status bool) {
 	}
 }
 
-func DaftarMenu(){
+func DaftarMenu() {
 	menu1 := Menu{
-		nama: "Kopi",
+		nama:  "Kopi",
 		harga: 30000,
 	}
 
-	menu2 := Menu{
-		nama: "Air Mineral",
-		harga: 10000,
-	}
+	// menu2 := Menu{
+	// 	nama:  "Air Mineral",
+	// 	harga: 10000,
+	// }
 
-	menu3 := Menu{
-		nama: "Susu",
-		harga: 20000,
-	}
+	// menu3 := Menu{
+	// 	nama:  "Susu",
+	// 	harga: 20000,
+	// }
 	fmt.Println(menu1)
-	fmt.Println(menu2)
-	fmt.Println(menu3)
+	// fmt.Println(menu2)
+	// fmt.Println(menu3)
 }
