@@ -2,7 +2,7 @@ package module
 
 import "fmt"
 
-type Status func(string) bool
+// type Status func(string) bool
 
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
@@ -25,8 +25,8 @@ func Recent(favorit string) (float32, float32) {
 	return a, b
 }
 
-func Member(nama string, status Status) {
-	if status(nama) {
+func Member(nama string, status bool) {
+	if status {
 		fmt.Println(nama, " merupakan seorang member")
 	} else {
 		fmt.Println(nama, " bukan member")
