@@ -25,10 +25,10 @@ func Recent(favorit string) (float32, float32) {
 	return a, b
 }
 
-func Member(nama string, status bool) {
+func Member(nama string, status func(string) bool) {
 	if status(nama) {
-		fmt.Println(nama, "merupakan seorang member")
+		fmt.Println(nama, " merupakan seorang member")
 	} else {
-		fmt.Println(nama, "bukan member")
+		fmt.Println(nama, " bukan member")
 	}
 }
