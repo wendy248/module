@@ -11,7 +11,7 @@ func Salam(a string) string {
 }
 
 func Recent(favorit string) (float32, float32) {
-	var a,b float32
+	var a, b float32
 
 	if favorit == "kopi" {
 		a = 30000
@@ -23,9 +23,9 @@ func Recent(favorit string) (float32, float32) {
 	return a, b
 }
 
-func Member(nama string, re bool){
-	if re == true {
-		fmt .Println(nama, " merupakan seorang member")
+func Member(nama string, re string) {
+	if re == "true" {
+		fmt.Println(nama, " merupakan seorang member")
 	} else {
 		fmt.Println(nama, " bukan member")
 	}
