@@ -47,3 +47,8 @@ func TampilJaga() {
 	}
 	fmt.Println(jaga1, jaga2, jaga3)
 }
+
+///struct method
+func (namaJaga DaftarJaga) Shift (nama string) {
+	fmt.Println("Halo", nama,",", namaJaga.Nama)
+}
