@@ -36,19 +36,14 @@ type DaftarJaga struct {
 }
 
 func TampilJaga() {
-	jaga1 := DaftarJaga{
+	jaga := DaftarJaga{
 		Nama: "Budi",
 	}
-	jaga2 := DaftarJaga{
-		Nama: "Ehsan",
-	}
-	jaga3 := DaftarJaga{
-		Nama: "Agus",
-	}
-	fmt.Println(jaga1, jaga2, jaga3)
+	
+	fmt.Println(jaga)
 }
 
 ///struct method
-func (namaJaga DaftarJaga) Shift (nama string) {
-	fmt.Println("Halo", nama,",", namaJaga.Nama)
+func (namaJaga DaftarJaga) ShiftJaga(nama string) {
+	fmt.Println("Halo", nama, ",", namaJaga.Nama)
 }
