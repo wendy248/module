@@ -49,6 +49,6 @@ func (namaJaga DaftarJaga) ShiftJaga(nama string) {
 }
 
 //interface struct
-func (a PPN) menghitungPPN() float64 {
-	return a.harga + (a.harga * 10 / 100)
+func MenghitungPPN(pajak float64) {
+	fmt.Println("Harga setelah pajak:", (pajak + (pajak * 10 / 100)))
 }
