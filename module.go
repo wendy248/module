@@ -31,27 +31,19 @@ func Member(nama string, status func(string) bool) {
 	}
 }
 
-type DaftarMenu struct {
-	Nama  string
-	Harga int16
-	Stok  bool
+type DaftarJaga struct {
+	Nama string
 }
 
-// func TampilMenu() {
-// 	Menu1 := DaftarMenu{
-// 		Nama:  "kopi",
-// 		Harga: 30000,
-// 		Stok:  true,
-// 	}
-
-// 	fmt.Println(Menu1)
-// }
-
-func ListMenu() {
-	menu := DaftarMenu{
-		Nama:  "kopi",
-		Harga: 30000,
-		Stok:  true,
+func TampilJaga() {
+	jaga1 := DaftarJaga{
+		Nama: "Budi",
 	}
-	fmt.Println(menu)
+	jaga2 := DaftarJaga{
+		Nama: "Ehsan",
+	}
+	jaga3 := DaftarJaga{
+		Nama: "Agus",
+	}
+	fmt.Println(jaga1, jaga2, jaga3)
 }
