@@ -51,14 +51,14 @@ func (namaJaga DaftarJaga) ShiftJaga(nama string) {
 //interface struct
 //menghitung pajak menggunakan struct interface
 type hitungInterface interface {
-	menghitungPPN() float64
+	menghitungPPN() float32
 }
 
 type PPN struct {
-	Harga float64
+	Harga float32
 }
 
-func Menghitung(a float64) {
+func Menghitung(a float32) {
 	b := a + (a * 10 / 100)
 	fmt.Println("Setelah pajak :", b)
 }
