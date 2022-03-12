@@ -38,11 +38,11 @@ type DaftarMenu struct {
 }
 
 func TampilMenu() {
-	menu1 := DaftarMenu{
+	Menu1 := DaftarMenu{
 		Nama:  "kopi",
 		Harga: 30000,
 		Stok:  true,
 	}
 
-	fmt.Println(menu1)
+	fmt.Println(Menu1)
 }
