@@ -37,12 +37,28 @@ type DaftarMenu struct {
 	Stok  bool
 }
 
-func TampilMenu() {
-	Menu1 := DaftarMenu{
-		Nama:  "kopi",
-		Harga: 30000,
-		Stok:  true,
+// func TampilMenu() {
+// 	Menu1 := DaftarMenu{
+// 		Nama:  "kopi",
+// 		Harga: 30000,
+// 		Stok:  true,
+// 	}
+
+// 	fmt.Println(Menu1)
+// }
+type Pegawai struct {
+	LamaBekerja  int8
+	Nama, Divisi string
+	Aktif        bool
+}
+
+func TampilData() {
+	pegawai := Pegawai{
+		LamaBekerja: 5,
+		Nama:        "Anwars",
+		Divisi:      "Keuangan",
+		Aktif:       true,
 	}
 
-	fmt.Println(Menu1)
+	fmt.Println(pegawai)
 }
