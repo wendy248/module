@@ -39,11 +39,16 @@ func TampilJaga() {
 	jaga := DaftarJaga{
 		Nama: "Budi",
 	}
-	
+
 	fmt.Println(jaga)
 }
 
 ///struct method
 func (namaJaga DaftarJaga) ShiftJaga(nama string) {
-	fmt.Println("Halo", nama, ",", namaJaga.Nama)
+	fmt.Println("Halo", nama, ",", namaJaga.Nama, "akan membantu anda")
+}
+
+//interface struct
+func (a PPN) menghitungPPN() float64 {
+	return a.harga + (a.harga * 10 / 100)
 }
