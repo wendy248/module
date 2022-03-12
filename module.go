@@ -33,14 +33,24 @@ func Member(nama string, status func(string) bool) {
 
 type DaftarJaga struct {
 	Nama string
+	Id   int8
 }
 
 func TampilJaga() {
-	jaga := DaftarJaga{
+	jaga1 := DaftarJaga{
 		Nama: "Budi",
+		Id:   1,
+	}
+	jaga2 := DaftarJaga{
+		Nama: "Agus",
+		Id:   2,
+	}
+	jaga3 := DaftarJaga{
+		Nama: "Ricky",
+		Id:   3,
 	}
 
-	fmt.Println(jaga)
+	fmt.Println(jaga1, jaga2, jaga3)
 }
 
 ///struct method
