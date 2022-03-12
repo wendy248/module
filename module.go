@@ -46,19 +46,12 @@ type DaftarMenu struct {
 
 // 	fmt.Println(Menu1)
 // }
-type Pegawai struct {
-	LamaBekerja  int8
-	Nama, Divisi string
-	Aktif        bool
-}
 
-func TampilData() {
-	pegawai := Pegawai{
-		LamaBekerja: 5,
-		Nama:        "Anwars",
-		Divisi:      "Keuangan",
-		Aktif:       true,
+func ListMenu() {
+	menu := DaftarMenu{
+		Nama:  "kopi",
+		Harga: 30000,
+		Stok:  true,
 	}
-
-	fmt.Println(pegawai)
+	fmt.Println(menu)
 }
