@@ -3,13 +3,14 @@ package module
 import "fmt"
 
 var member bool
+var b float32
 
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
 }
 
 func Salam(a string) string {
-	return "Hai " + a + ", selamat datang di coffee shop abc"
+	return "Hai " + a + ", selamat datang di coffee shop Kodehive"
 }
 
 func Recent(favorit string) (float32, float32) {
@@ -34,10 +35,10 @@ func Recent(favorit string) (float32, float32) {
 
 func Member(nama string, status func(string) bool) {
 	if status(nama) {
-		fmt.Println(nama, "merupakan seorang member")
+		fmt.Println(nama, "merupakan seorang member Kodehive")
 		member = true
 	} else {
-		fmt.Println(nama, "bukan member")
+		fmt.Println(nama, "bukan member Kodehive")
 		member = false
 	}
 }
@@ -67,7 +68,7 @@ func TampilJaga() {
 
 ///struct method
 func (namaJaga DaftarJaga) ShiftJaga(nama string) {
-	fmt.Println("\nHalo", nama, ",", namaJaga.Nama, "akan membantu anda")
+	fmt.Println("\nHalo", nama, ", barista", namaJaga.Nama, "akan membantu anda")
 }
 
 //interface struct
@@ -81,8 +82,8 @@ type PPN struct {
 }
 
 func Menghitung(a float32) {
-	b := a + (a * 10 / 100)
-	fmt.Println("Setelah pajak :", b)
+	c := b + (b * 10 / 100)
+	fmt.Println("Harga yang perlu dibayar :", c)
 }
 
 //anonymous struct
@@ -112,7 +113,7 @@ func DaftarMenu() {
 	}
 
 	fmt.Println("\nDaftar Menu :")
-	fmt.Println(menu1.Nama, ". Harga :", menu1.Harga)
-	fmt.Println(menu2.Nama, ". Harga :", menu2.Harga)
-	fmt.Println(menu3.Nama, ". Harga :", menu3.Harga)
+	fmt.Println(menu1.Nama, "- Harga :", menu1.Harga)
+	fmt.Println(menu2.Nama, "- Harga :", menu2.Harga)
+	fmt.Println(menu3.Nama, "- Harga :", menu3.Harga)
 }
