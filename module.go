@@ -50,7 +50,7 @@ func TampilJaga() {
 		Id:   3,
 	}
 
-	fmt.Println(jaga1, jaga2, jaga3)
+	fmt.Println(jaga1.Nama, jaga2.Nama, jaga3.Nama)
 }
 
 ///struct method
@@ -71,4 +71,35 @@ type PPN struct {
 func Menghitung(a float32) {
 	b := a + (a * 10 / 100)
 	fmt.Println("Setelah pajak :", b)
+}
+
+//anonymous struct
+func DaftarMenu {
+	menu1 := struct {
+		Nama  string
+		harga int16
+	}{
+		Nama:  "Kopi",
+		Harga: 30000,
+	}
+
+	menu2 := struct {
+		Nama  string
+		harga int16
+	}{
+		Nama:  "Air",
+		harga: 10000,
+	}
+
+	menu3 := struct {
+		Nama  string
+		harga int16
+	}{
+		Nama:  "Sirup",
+		harga: 15000,
+	}
+
+	fmt.Println(menu1)
+	fmt.Println(menu2)
+	fmt.Println(menu3)
 }
