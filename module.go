@@ -29,7 +29,7 @@ func Recent(favorit string, jumlah float32) (float32, float32) {
 		b = a * jumlah
 	}
 	fmt.Println("Nilai :", b)
-	return a, b
+	return a * jumlah, b
 }
 
 func Member(nama string, status func(string) bool) {
