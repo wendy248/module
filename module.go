@@ -3,7 +3,7 @@ package module
 import "fmt"
 
 var member bool
-var a, b float32
+var a, b, c float32
 
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
@@ -81,7 +81,9 @@ type PPN struct {
 }
 
 func Menghitung(a float32) {
-	c := b + (b * 10 / 100)
+	c = b + (b * 10 / 100)
+	fmt.Println("NIlai a : ", a)
+	fmt.Println("nilai b : ", b)
 	fmt.Println("Harga yang perlu dibayar :", c)
 }
 
