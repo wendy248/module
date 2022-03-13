@@ -74,10 +74,10 @@ func Menghitung(a float32) {
 }
 
 //anonymous struct
-func DaftarMenu {
+func DaftarMenu() {
 	menu1 := struct {
 		Nama  string
-		harga int16
+		Harga int16
 	}{
 		Nama:  "Kopi",
 		Harga: 30000,
@@ -85,21 +85,21 @@ func DaftarMenu {
 
 	menu2 := struct {
 		Nama  string
-		harga int16
+		Harga int16
 	}{
 		Nama:  "Air",
-		harga: 10000,
+		Harga: 10000,
 	}
 
 	menu3 := struct {
 		Nama  string
-		harga int16
+		Harga int16
 	}{
 		Nama:  "Sirup",
-		harga: 15000,
+		Harga: 15000,
 	}
 
-	fmt.Println(menu1)
-	fmt.Println(menu2)
-	fmt.Println(menu3)
+	fmt.Println(menu1.Nama, ". Harga :", menu1.Harga)
+	fmt.Println(menu2.Nama, ". Harga :", menu2.Harga)
+	fmt.Println(menu3.Nama, ". Harga :", menu3.Harga)
 }
