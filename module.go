@@ -2,6 +2,8 @@ package module
 
 import "fmt"
 
+var member bool
+
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
 }
@@ -10,7 +12,7 @@ func Salam(a string) string {
 	return "Hai " + a + ", selamat datang di coffee shop abc"
 }
 
-func Recent(favorit string, voucher string) (float32, float32) {
+func Recent(favorit string) (float32, float32) {
 	var a, b float32
 
 	if favorit == "kopi" {
@@ -21,7 +23,7 @@ func Recent(favorit string, voucher string) (float32, float32) {
 		a = 15000
 	}
 
-	if voucher == "ya" || voucher == "Ya" {
+	if member{
 		b = a - (a * 10 / 100)
 	} else {
 		b = a
@@ -33,8 +35,10 @@ func Recent(favorit string, voucher string) (float32, float32) {
 func Member(nama string, status func(string) bool) {
 	if status(nama) {
 		fmt.Println(nama, "merupakan seorang member")
+		member = true
 	} else {
 		fmt.Println(nama, "bukan member")
+		member = false
 	}
 }
 
