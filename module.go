@@ -7,19 +7,26 @@ func Intro() {
 }
 
 func Salam(a string) string {
-	return "Hai " + a + ", selamat datang"
+	return "Hai " + a + ", selamat datang di coffee shop abc"
 }
 
-func Recent(favorit string) (float32, float32) {
+func Recent(favorit string, voucher string) (float32, float32) {
 	var a, b float32
 
 	if favorit == "kopi" {
 		a = 30000
 	} else if favorit == "air" {
 		a = 10000
+	} else if favorit == "sirup" {
+		a = 15000
 	}
 
-	b = a + (a * 10 / 100)
+	if voucher == "ya" || voucher == "Ya" {
+		b = a - (a * 10 / 100)
+	} else {
+		b = a
+	}
+
 	return a, b
 }
 
@@ -50,12 +57,13 @@ func TampilJaga() {
 		Id:   3,
 	}
 
+	fmt.Println("\nDaftar nama barista yang aktif hari ini :")
 	fmt.Println(jaga1.Nama, jaga2.Nama, jaga3.Nama)
 }
 
 ///struct method
 func (namaJaga DaftarJaga) ShiftJaga(nama string) {
-	fmt.Println("Halo", nama, ",", namaJaga.Nama, "akan membantu anda")
+	fmt.Println("\nHalo", nama, ",", namaJaga.Nama, "akan membantu anda")
 }
 
 //interface struct
@@ -99,6 +107,7 @@ func DaftarMenu() {
 		Harga: 15000,
 	}
 
+	fmt.Println("\nDaftar Menu :")
 	fmt.Println(menu1.Nama, ". Harga :", menu1.Harga)
 	fmt.Println(menu2.Nama, ". Harga :", menu2.Harga)
 	fmt.Println(menu3.Nama, ". Harga :", menu3.Harga)
