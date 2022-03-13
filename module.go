@@ -3,7 +3,7 @@ package module
 import "fmt"
 
 var member bool
-var b float32
+var a, b float32
 
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
@@ -14,7 +14,6 @@ func Salam(a string) string {
 }
 
 func Recent(favorit string) (float32, float32) {
-	var a, b float32
 
 	if favorit == "kopi" {
 		a = 30000
@@ -24,7 +23,7 @@ func Recent(favorit string) (float32, float32) {
 		a = 15000
 	}
 
-	if member{
+	if member {
 		b = a - (a * 10 / 100)
 	} else {
 		b = a
