@@ -13,7 +13,7 @@ func Salam(a string) string {
 	return "Hai " + a + ", selamat datang di coffee shop Kodehive"
 }
 
-func Recent(favorit string) (float32, float32) {
+func Recent(favorit string, jumlah int8) (float32, float32) {
 
 	if favorit == "kopi" || favorit == "Kopi" {
 		a = 30000
@@ -24,9 +24,9 @@ func Recent(favorit string) (float32, float32) {
 	}
 
 	if member {
-		b = a - (a * 10 / 100)
+		b = (a - (a * 10 / 100)) * float32(jumlah)
 	} else {
-		b = a
+		b = a * float32(jumlah)
 	}
 
 	return a, b
