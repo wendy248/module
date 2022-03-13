@@ -15,11 +15,11 @@ func Salam(a string) string {
 
 func Recent(favorit string) (float32, float32) {
 
-	if favorit == "kopi" {
+	if favorit == "kopi" || favorit == "Kopi" {
 		a = 30000
-	} else if favorit == "air" {
+	} else if favorit == "air" || favorit == "Air" {
 		a = 10000
-	} else if favorit == "sirup" {
+	} else if favorit == "sirup" || favorit == "Sirup" {
 		a = 15000
 	}
 
@@ -82,8 +82,6 @@ type PPN struct {
 
 func Menghitung(a float32) {
 	c = b + (b * 10 / 100)
-	fmt.Println("NIlai a : ", a)
-	fmt.Println("nilai b : ", b)
 	fmt.Println("Harga yang perlu dibayar :", c)
 }
 
