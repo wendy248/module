@@ -28,7 +28,7 @@ func Recent(favorit string, jumlah float32) (float32, float32) {
 	} else {
 		b = a * jumlah
 	}
-
+	fmt.Println("Nilai :", b)
 	return a, b
 }
 
