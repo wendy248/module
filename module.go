@@ -1,6 +1,9 @@
 package module
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 var member bool
 var a, b, c float32
@@ -21,6 +24,9 @@ func Recent(favorit string, jumlah float32) (float32, float32) {
 		a = 10000
 	} else if favorit == "sirup" || favorit == "Sirup" {
 		a = 15000
+	} else {
+		fmt.Println("Tidak ada menu tersebut")
+		os.Exit(0)
 	}
 
 	if member {
