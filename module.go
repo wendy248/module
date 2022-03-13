@@ -28,7 +28,6 @@ func Recent(favorit string, jumlah float32) (float32, float32) {
 	} else {
 		b = a * jumlah
 	}
-	fmt.Println("Nilai :", b)
 	return a * jumlah, b
 }
 
@@ -82,7 +81,7 @@ type PPN struct {
 
 func Menghitung(a float32) {
 	c = b + (b * 10 / 100)
-	fmt.Println("Harga yang perlu dibayar :", c)
+	fmt.Println("Harga yang perlu dibayar (PPN):", c)
 }
 
 //anonymous struct
