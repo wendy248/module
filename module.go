@@ -6,7 +6,7 @@ import (
 )
 
 var member bool
-var a, b, c float32
+var a, b, c, d float32
 
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
@@ -30,11 +30,12 @@ func Recent(favorit string, jumlah float32) (float32, float32) {
 	}
 
 	if member {
-		b = (a - (a * 10 / 100)) * jumlah
+		b += (a - (a * 10 / 100)) * jumlah
 	} else {
-		b = a * jumlah
+		b += a * jumlah
 	}
-	return a * jumlah, b
+	d += a * jumlah
+	return d, b
 }
 
 func Member(nama string, status func(string) bool) {
