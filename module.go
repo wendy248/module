@@ -82,8 +82,8 @@ type PPN struct {
 	Harga float32
 }
 
-func Menghitung(a float32) {
-	c = a + (a * 10 / 100)
+func Menghitung(harga float32) {
+	c = harga + (harga * 10 / 100)
 	fmt.Println("Harga yang perlu dibayar (PPN):", c)
 }
 
