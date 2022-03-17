@@ -19,23 +19,23 @@ func Salam(a string) string {
 func Recent(favorit string, jumlah float32) (float32, float32) {
 
 	if favorit == "kopi" || favorit == "Kopi" {
-		a = a + (30000 * jumlah)
+		a = 30000
 	} else if favorit == "air" || favorit == "Air" {
-		a = a + (10000 * jumlah)
+		a = 10000
 	} else if favorit == "sirup" || favorit == "Sirup" {
-		a = a + (15000 * jumlah)
+		a = 15000
 	} else {
 		fmt.Println("Tidak ada menu tersebut")
 		os.Exit(0)
 	}
 
 	if member {
-		b = b + ((a - (a * 10 / 100)) * jumlah)
+		b = (a - (a * 10 / 100)) * jumlah
 	} else {
-		b = b + (a * jumlah)
+		b = a * jumlah
 	}
 
-	return a, b
+	return a * jumlah, b
 }
 
 func Member(nama string, status func(string) bool) {
