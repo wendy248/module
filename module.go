@@ -6,7 +6,7 @@ import (
 )
 
 var member bool
-var a, b, c, total float32
+var a, b, c float32
 
 func Intro() {
 	fmt.Println("\nProgram coffee shop sedang dijalankan...")
@@ -19,16 +19,15 @@ func Salam(a string) string {
 func Recent(favorit string, jumlah float32) (float32, float32) {
 
 	if favorit == "kopi" || favorit == "Kopi" {
-		a = 30000
+		a = a + (30000 * jumlah)
 	} else if favorit == "air" || favorit == "Air" {
-		a = 10000
+		a = a + (10000 * jumlah)
 	} else if favorit == "sirup" || favorit == "Sirup" {
-		a = 15000
+		a = a + (15000 * jumlah)
 	} else {
 		fmt.Println("Tidak ada menu tersebut")
 		os.Exit(0)
 	}
-	total = total + (a * jumlah)
 
 	if member {
 		b = b + ((a - (a * 10 / 100)) * jumlah)
@@ -36,7 +35,7 @@ func Recent(favorit string, jumlah float32) (float32, float32) {
 		b = b + (a * jumlah)
 	}
 
-	return total, b
+	return a, b
 }
 
 func Member(nama string, status func(string) bool) {
@@ -51,21 +50,17 @@ func Member(nama string, status func(string) bool) {
 
 type DaftarJaga struct {
 	Nama string
-	Id   int8
 }
 
 func TampilJaga() {
 	jaga1 := DaftarJaga{
 		Nama: "Budi",
-		Id:   1,
 	}
 	jaga2 := DaftarJaga{
 		Nama: "Agus",
-		Id:   2,
 	}
 	jaga3 := DaftarJaga{
 		Nama: "Ricky",
-		Id:   3,
 	}
 
 	fmt.Println("\nDaftar nama barista yang aktif hari ini :")
